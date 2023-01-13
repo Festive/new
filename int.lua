@@ -20,7 +20,7 @@ local waitDeps = {
 }
 
 getdep = function(dep)
-	return loadstring("https://raw.githubusercontent.com/Festive/new/main/deps/"..dep..".lua")();
+	return loadstring(game:service("HttpService"):GetAsync("https://raw.githubusercontent.com/Festive/new/main/deps/"..dep..".lua"))();
 end
 
 local luaX = getdep("LuaX")
