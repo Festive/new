@@ -68,7 +68,7 @@
 --
 --------------------------------------------------------------------]]
 
-local luaZ = require(script.Parent.LuaZ)
+local luaZ = shared.getdep("LuaZ")
 
 local luaX = {}
 
