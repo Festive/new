@@ -58,7 +58,7 @@
 
 --requires luaP
 local luaU = {}
-local luaP = require(script.Parent.LuaP)
+local luaP = shared.getdep("LuaP")
 
 -- mark for precompiled code ('<esc>Lua') (from lua.h)
 luaU.LUA_SIGNATURE = "\27Lua"
