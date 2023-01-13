@@ -20,7 +20,7 @@ local waitDeps = {
 }
 
 getdep = function(dep)
-	return "https://raw.githubusercontent.com/Festive/new/main/deps/"..dep..".lua";
+	return loadstring("https://raw.githubusercontent.com/Festive/new/main/deps/"..dep..".lua")();
 end
 
 local luaX = getdep("LuaX")
