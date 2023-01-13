@@ -71,9 +71,9 @@
 
 --requires luaP, luaX, luaK
 local luaY = {}
-local luaX = require(script.Parent.LuaX)
-local luaK = require(script.Parent.LuaK)(luaY)
-local luaP = require(script.Parent.LuaP)
+local luaX = shared.getdep("LuaX")
+local luaK = shared.getdep("LuaK")(luaY)
+local luaP = shared.getdep("LuaP")
 
 --[[--------------------------------------------------------------------
 -- Expression descriptor
