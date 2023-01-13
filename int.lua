@@ -19,11 +19,15 @@ local waitDeps = {
 	'LuaZ';
 }
 
-local luaX = require(script.LuaX)
-local luaY = require(script.LuaY)
-local luaZ = require(script.LuaZ)
-local luaU = require(script.LuaU)
-local fiOne = require(script.FiOne)
+getdep = function(dep)
+	return "https://raw.githubusercontent.com/Festive/new/main/deps/" ..dep..".lua";
+end
+
+local luaX = getdep("LuaX")
+local luaY = getdep("LuaY")
+local luaZ = getdep("LuaZ")
+local luaU = getdep("LuaU")
+local fiOne = getdep("FiOne")
 
 luaX:init()
 local LuaState = {}
