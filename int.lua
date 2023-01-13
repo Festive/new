@@ -19,8 +19,6 @@ local waitDeps = {
 	'LuaZ';
 }
 
-for i,v in pairs(waitDeps) do script:WaitForChild(v) end
-
 local luaX = require(script.LuaX)
 local luaY = require(script.LuaY)
 local luaZ = require(script.LuaZ)
