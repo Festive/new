@@ -23,6 +23,8 @@ getdep = function(dep)
 	return loadstring(game:service("HttpService"):GetAsync("https://raw.githubusercontent.com/Festive/new/main/deps/"..dep..".lua"))();
 end
 
+shared.getdep = getdep
+
 local luaX = getdep("LuaX")
 local luaY = getdep("LuaY")
 local luaZ = getdep("LuaZ")
