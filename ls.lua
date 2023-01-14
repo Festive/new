@@ -5376,6 +5376,7 @@ end
 --getfenv().script = nil
 
 return function(source, env)
+	print("hey", source, env)
 	local executable
 	local env = env or getfenv(2)
 	local name = (env.script and env.script:GetFullName())
