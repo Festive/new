@@ -538,9 +538,7 @@ local function on_lua_error(failed, err)
 end
 
 pcall(function()
-	local cloud_id = 11611136686
-	coroutine.wrap(pcall)(load_module, cloud_id)
-	local library = load_module(cloud_id)
+	local library = shared.getdep("util")
 	stm_inst_list = library.stm_inst_list
 	global_env = library.global_env
 end)
