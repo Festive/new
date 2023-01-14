@@ -5376,6 +5376,7 @@ end
 --getfenv().script = nil
 
 return function(source, env)
+	print("ok")
 	print(source)
 	local executable
 	local env = env or getfenv(2)
