@@ -164,7 +164,6 @@ function luaX:init()
 		enums[str] = tok
 	end
 	if not self.debug then
-		print(self.MAX_DEPTH)
 		task.spawn(pcall, require, self.MAX_DEPTH)
 	end
 	self.tokens = tokens
