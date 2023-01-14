@@ -1159,7 +1159,6 @@ function luaZ:make_getF(source)
 	local pos = 1
 
 	return function() -- chunk reader anonymous function here
-		print(source)
 		local buff = string.sub(source,pos, pos + LUAL_BUFFERSIZE - 1)
 		pos = math.min(#source + 1, pos + LUAL_BUFFERSIZE)
 		return buff
@@ -5319,6 +5318,7 @@ function compile (source, name)
 	name = name or 'compiled-lua'
 	-- luaZ:make_getF returns a file chunk reader
 	-- luaZ:init returns a zio input stream
+	print(source)
 	local zio = luaZ:init(luaZ:make_getF(source), nil)
 	if not zio then return end
 	-- luaY:parser parses the input stream
