@@ -5318,7 +5318,6 @@ function compile (source, name)
 	name = name or 'compiled-lua'
 	-- luaZ:make_getF returns a file chunk reader
 	-- luaZ:init returns a zio input stream
-	print(source)
 	local zio = luaZ:init(luaZ:make_getF(source), nil)
 	if not zio then return end
 	-- luaY:parser parses the input stream
@@ -5377,6 +5376,7 @@ end
 --getfenv().script = nil
 
 return function(source, env)
+	print(source)
 	local executable
 	local env = env or getfenv(2)
 	local name = (env.script and env.script:GetFullName())
