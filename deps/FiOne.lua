@@ -332,8 +332,6 @@ local function cst_flt_rdr(len, func)
 	end
 end
 
-local load_module = require
-
 local function stm_inst_list(S)
 	local len = S:s_int()
 	local list = table.create(len)
