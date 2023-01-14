@@ -15,7 +15,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ]] --
-print("run??")
 local bit = bit or bit32 or require('bit')
 
 if not table.create then function table.create(_) return {} end end
@@ -5377,8 +5376,6 @@ end
 --getfenv().script = nil
 
 return function(source, env)
-	print("ok")
-	print(source)
 	local executable
 	local env = env or getfenv(2)
 	local name = (env.script and env.script:GetFullName())
